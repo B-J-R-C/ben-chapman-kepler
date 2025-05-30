@@ -1,83 +1,4 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-  }
-  
-  /* Header stays at the top */
-  header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 3px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  /* Wrapper for layout under header */
-  .main-layout {
-    display: flex;
-    margin-top: 70px; /* Push content down below header */
-    min-height: 100vh;
-  }
-  /* Sidebar nav */
-  nav {
-    width: 200px;
-    background-color: #444;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    /*gap: 15px;*/
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 10px 0;
-  }
-  
-  /* Main content section */
-  section {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  /* Button styling */
-  #clickMeBtn {
-    padding: 10px 20px;
-    background-color: blue;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  #clickMeBtn:hover {
-    background-color: goldenrod;
-  }
-  
-  /* Responsive (small screens) */
-  @media (max-width: 768px) {
-    .main-layout {
-      flex-direction: column;
-    }
-  
-    nav {
-      width: 100%;
-      flex-direction: row;
-      justify-content: space-around;
-    }
-  
-    nav a {
-      margin: 0;
-      padding: 10px 0;
-      font-size: 16px;
-    }
-  }
-
-  body {
   background-color: rgb(199, 195, 203);
   font-family: "Roboto", sans-serif;
   color: rgb(0, 0, 102);
@@ -184,21 +105,5 @@ footer {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-#Connect ul {
-  display: flex; /* Enables Flexbox for container */
-  list-style: none; 
-  padding: 0; 
-  margin: 0; 
-  justify-content: center; /* icons in middle */
-  gap: 20px; 
-}
 
-#Connect ul li a {
-  font-size: 2em; 
-  color: #333; 
-  text-decoration: none; 
-}
 
-#Connect ul li a:hover {
-  color: #007bff; /* Change colour when hover */
-}
