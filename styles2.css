@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: rgb(199, 195, 203);
   font-family: "Roboto", sans-serif;
   color: rgb(0, 0, 102);
@@ -28,7 +28,7 @@ body {
 
 .profile-photo {
   height: 6.5em; /* image size */
-  width: auto; 
+ /* width: auto; 
   border-radius: 50%; 
   object-fit: cover; 
  /* border: 3px solid #34495e; /* not sure about border */
@@ -37,7 +37,7 @@ body {
 
 
 
-.roboto-font {
+/*.roboto-font {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -53,7 +53,7 @@ button {
  /* margin-bottom: 20px; */
 }
 
-a[href="Page1.html"] { 
+/*a[href="Page1.html"] { 
   display: block; 
   margin-bottom: 20px; 
   text-align: center; 
@@ -105,5 +105,5 @@ footer {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
+*/
 
