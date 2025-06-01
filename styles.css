@@ -2,7 +2,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; /* Initial background color */
+  color: rgb(0, 0, 102); /* Default text color from later body rule */
 }
 
 /* Keep header at the top */
@@ -10,7 +11,7 @@ header {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 3px;
+  padding: 3px; /* Reduced padding for a slimmer header */
   position: fixed;
   top: 0;
   width: 100%;
@@ -20,9 +21,10 @@ header {
 /* Wrapper for layout under header */
 .main-layout {
   display: flex;
-  margin-top: 70px; 
-  min-height: 100vh;
+  margin-top: 60px; /* Adjusted to match typical header height */
+  min-height: calc(100vh - 60px - 40px); /* Full viewport height minus header and footer */
 }
+
 /* Sidebar nav */
 nav {
   width: 200px;
@@ -30,13 +32,19 @@ nav {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  /*gap: 15px;*/
+  /*gap: 15px;*/ /* Uncomment if you prefer gap over margin for nav items */
 }
 
 nav a {
   color: white;
   text-decoration: none;
   margin: 10px 0;
+  padding: 8px; /* Added padding for better clickability */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+nav a:hover {
+  background-color: #555; /* Hover effect for nav links */
 }
 
 /* Main content section */
@@ -45,6 +53,45 @@ section {
   padding: 20px;
 }
 
+/* --- Skills Section Styling --- */
+#skills-section h2 {
+  text-align: center;
+  color: #2c3e50; /* Consistent with Experience heading */
+  margin-bottom: 20px; /* Space below heading */
+  font-size: 2.2em; /* Consistent with Experience heading */
+}
+
+#skills-section ul {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+  margin: 0 auto; /* Center the list if it has a max-width */
+  max-width: 800px; /* Max width for the skills container */
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center items horizontally */
+  gap: 15px; /* Space between skill items */
+}
+
+#skills-section ul li {
+  background-color: #ffffff;
+  color: #333;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px; /* More rounded corners */
+  font-size: 1em;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#skills-section ul li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  background-color: #e9ecef; /* Slight hover background change */
+}
+/* --- End of Skills Section Styling --- */
+
+
 /* Button styling */
 #clickMeBtn {
   padding: 10px 20px;
@@ -52,12 +99,17 @@ section {
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 5px; /* Added border-radius */
+  display: block; /* Make it a block to center with margin */
+  margin: 20px auto; /* Center the button */
 }
 
 #clickMeBtn:hover {
   background-color: goldenrod;
 }
 
+
+/*
 body {
   background-color: rgb(199, 195, 203);
   font-family: "Roboto", sans-serif;
@@ -65,6 +117,7 @@ body {
   margin: 0;
   padding: 0;
 }
+*/
 
 .heading-container {
   display: flex;
@@ -93,7 +146,7 @@ body {
   /* border: 3px solid #34495e; /* not sure about border */
 }
 
-.roboto-font {
+.roboto-font { /* no longer used in HTML */
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -103,15 +156,21 @@ body {
 #change-text-btn {
   color: aqua;
   background-color: rebeccapurple;
+  padding: 8px 15px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  display: block; 
+  margin: 10px auto 20px; /* may need adjustment */
 }
 
 button {
-  /* margin-bottom: 20px; */
+  /* margin-bottom: 20px; */ 
 }
 
-a[href="Page1.html"] {
+a[href="Page1.html"] { 
   display: block;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */ /* gap was too big */
   text-align: center;
 }
 
@@ -122,6 +181,11 @@ footer {
   background-color: #a43131;
   color: white;
   padding: 10px;
+  /* position: fixed; */ /* Removed fixed position */
+  /* bottom: 0; */
+  width: 100%;
+  height: 40px; /* smaller height look sbetter IMHO */
+  box-sizing: border-box; 
 }
 
 #Experience h2 {
@@ -163,7 +227,7 @@ footer {
   list-style: none;
   padding: 0;
   margin: 0;
-  justify-content: center; /* icons in middle */
+  justify-content: center; /* centralised */
   gap: 20px;
 }
 
@@ -171,28 +235,27 @@ footer {
   font-size: 2em;
   color: #333;
   text-decoration: none;
+  transition: color 0.3s; 
 }
 
 #Connect ul li a:hover {
   color: #054282; /* made it darker */
 }
 
-/* --- Media for Responsiveness --- */
+/* * Media for Responsiveness * */
 
 /* Tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
-  /* Adjust margins n header */
   .main-layout {
-    margin-top: 60px; 
+    margin-top: 55px; /* Adjusted for potentially slimmer header */
+    min-height: calc(100vh - 55px - 35px);
   }
 
-  /* wider for large tablet */
   nav {
     width: 180px; 
     padding: 15px;
   }
 
-  
   #main-heading {
     font-size: 3em; 
   }
@@ -201,8 +264,13 @@ footer {
     height: 5.5em; 
   }
 
-  #Experience h2 {
+  #Experience h2, #skills-section h2 { /* #skills-section h2 */
     font-size: 2em; 
+  }
+
+  #skills-section ul li { /* skills items */
+    font-size: 0.95em;
+    padding: 10px 18px;
   }
 
   .experience-item {
@@ -210,81 +278,89 @@ footer {
     padding: 20px;
   }
 
-  /* Adjust social media icons for tablet */
   #Connect ul li a {
     font-size: 1.8em;
+  }
+
+  footer {
+    height: 35px; 
+    font-size: 0.95em;
   }
 }
 
 /* Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
-  /*  Stack  */
   .main-layout {
     flex-direction: column;
-    margin-top: 50px; /* Reduce as mobile */
+    margin-top: 50px; 
+    min-height: calc(100vh - 50px - 30px);
   }
-
   
   nav {
-    width: 100%; /* Full width for mobile */
-    flex-direction: row; /* across page */
+    width: 100%; 
+    flex-direction: row; 
     justify-content: space-around; 
     padding: 10px 0; 
+    order: -1; /* nav to top on mobile */
   }
 
-  /* navigation for mobile */
   nav a {
     margin: 0; 
-    padding: 5px 10px; 
-    font-size: 14px; 
+    padding: 8px 10px; /* more padding */
+    font-size: 13px; 
   }
 
-  /* heading for mobile */
   .heading-container {
     flex-direction: column; 
     text-align: center;
     gap: 15px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
   }
 
-  /* reduce for mobile */
   #main-heading {
-    font-size: 2.5em;
+    font-size: 2.2em; 
   }
 
   .profile-photo {
-    height: 4.5em;
+    height: 4em; 
   }
-
   
   section {
     padding: 15px;
   }
-
   
   .experience-grid {
-    grid-template-columns: 1fr; /* Stack on small screen */
-    padding: 0 15px;
+    grid-template-columns: 1fr; 
+    padding: 0 10px; /* reduced padding */
   }
 
-  #Experience h2 {
+  #Experience h2, #skills-section h2 { /*#skills-section h2 */
     font-size: 1.8em;
   }
 
+  #skills-section ul { 
+    gap: 10px;
+  }
+
+  #skills-section ul li { 
+    font-size: 0.9em;
+    padding: 8px 15px;
+    border-radius: 15px;
+  }
+
   .experience-item {
-    font-size: 0.95em;
+    font-size: 0.9em; /* smaller font size */
     padding: 15px;
   }
 
-  /* socials for mobile */
   #Connect ul li a {
     font-size: 1.5em;
   }
 
-  /* mobile footer */
   footer {
     padding: 8px;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    height: 30px; 
   }
 }
